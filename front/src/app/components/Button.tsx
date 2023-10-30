@@ -16,10 +16,7 @@ const Button = ({
 }) => {
   return (
     <button
-      className={`${classes} ${
-        xl ? "w-[350px]" : "w-[250px]"
-      } h-20 rounded-[60px] text-3xl flex flex-row  items-center justify-center`}
-      type={submit ? "submit" : "button"}
+      className={`${classes} py-3  border flex flex-row items-center justify-center px-10 text-2xl rounded-[60px]`}
     >
       {icon}
       <span>{name}</span>

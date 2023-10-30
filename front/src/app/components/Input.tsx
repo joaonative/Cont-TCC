@@ -16,7 +16,7 @@ const Input = ({
       type={type}
       placeholder={label}
       value={value}
-      className="w-[400px] border-b-4 border-azul-escuro placeholder:text-grey placeholder:capitalize placeholder:text-2xl bg-transparent outline-none text-2xl"
+      className="block w-full p-2 border-b-2 outline-none placeholder:capitalize bg-transparent border-b-azul-escuro"
       onChange={onChange}
       required
       autoComplete="new-password"
