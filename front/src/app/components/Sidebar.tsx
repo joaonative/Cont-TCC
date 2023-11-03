@@ -9,6 +9,9 @@ import Image from "next/image";
 type SidebarItem = {
   name: string;
   href: string;
+  primary: string;
+  secondary: string;
+  tertiary: string;
 };
 
 const Sidebar = ({
@@ -30,9 +33,9 @@ const Sidebar = ({
   };
 
   const sidebarItems: SidebarItem[] = [
-    { name: "Todos os Diários", href: "myDiary" },
-    { name: "Favoritos", href: "myDiary/favorites" },
-    { name: "Editor", href: "myDiary/editor" },
+    { name: "Todos os Diários", href: "myDiary", primary: "bg-roxao text-white", secondary: "text-roxao", tertiary: "outra-classe" },
+    { name: "Favoritos", href: "myDiary/favorites", primary: "bg-roxao text-white", secondary: "text-roxao", tertiary: "outra-classe" },
+    { name: "Editor", href: "myDiary/editor", primary: "bg-roxao text-white", secondary: "text-roxao", tertiary: "outra-classe" },
   ];
 
   useEffect(() => {
@@ -42,11 +45,11 @@ const Sidebar = ({
   }, []);
 
   return (
-    <header className="flex flex-row items-center justify-between md:px-5 md:py-2 p-2 bg-roxo md:hidden">
+    <header className={`flex flex-row items-center justify-between md:px-5 md:py-2 p-2 bg-[${secondary}] md:hidden`}>
       <Link href={"/"}>
         <h1 className="md:text-4xl text-2xl font-bold text-white">Cont;nue</h1>
       </Link>
-      <div className="relative p-1 shadow-2xl rounded-[12px] bg-roxao">
+      <div className={`relative p-1 shadow-2xl rounded-[12px] bg-[${primary}]`}>
         <button onClick={() => setIsOpen(!isOpen)} className="text-white p-2">
           <Image
             src={!isOpen ? Menu : MenuExit}
@@ -57,12 +60,15 @@ const Sidebar = ({
           />
         </button>
         {isOpen && (
-          <div className="absolute right-0 mt-4 w-52 md:w-80 py-1 rounded-md shadow-lg bg-roxo">
+          <div className={`absolute right-0 mt-4 w-52 md:w-80 py-1 rounded-md shadow-lg bg-[${secondary}]`}>
             {sidebarItems.map((item, index) => (
               <SidebarItem
                 key={index}
                 href={item.href}
                 name={item.name}
+                primary={item.primary}
+                secondary={item.secondary}
+                tertiary={item.tertiary}
                 selected={item.name === activeItem}
                 onItemClick={handleItemClick}
               />
