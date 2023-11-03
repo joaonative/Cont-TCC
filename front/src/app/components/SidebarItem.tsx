@@ -6,10 +6,16 @@ const SidebarItem = ({
   name,
   selected,
   onItemClick,
+  primary,
+  secondary,
+  tertiary,
 }: {
   href: string;
   name: string;
   selected?: boolean;
+  primary: string;
+  secondary: string;
+  tertiary: string;
   onItemClick: (name: string) => void;
 }) => {
   const handleClick = () => {
@@ -17,13 +23,13 @@ const SidebarItem = ({
   };
 
   return (
-    <Link
-      href={`/${href}`}
-      className={`w-full py-2 px-4 flex items-center justify-center text-xl capitalize font-semibold ${
-        selected ? "bg-roxao text-white" : "bg-none text-roxao"
-      }`}
-      onClick={handleClick}
-    >
+<Link
+  href={`/${href}`}
+  className={`w-full py-2 px-4 flex items-center justify-center text-xl capitalize font-semibold  ${
+    selected ? primary :  secondary
+  }`}
+  onClick={handleClick}
+>
       {name}
     </Link>
   );
