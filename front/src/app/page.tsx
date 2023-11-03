@@ -22,7 +22,7 @@ export default function Home() {
           <NavButton
             name="Dicas"
             alt="Tips icon"
-            color="bg-[#EED28A]"
+            color="bg-[#FDBD5E]"
             icon={Tips}
             href=""
           />
@@ -31,7 +31,7 @@ export default function Home() {
             alt="Tips icon"
             color="bg-[#CBB3D8]"
             icon={Book}
-            href=""
+            href="myDiary"
           />
           <NavButton
             name="Depoimentos"

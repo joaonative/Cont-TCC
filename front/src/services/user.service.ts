@@ -15,7 +15,6 @@ export default async function getUserInformation(): Promise<User> {
         },
       }
     );
-    console.log(response.data.res);
     return response.data;
   } catch (error) {
     console.error("Erro ao buscar usuário:", error);

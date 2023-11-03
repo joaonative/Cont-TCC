@@ -1,25 +1,28 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-        colors: {
-          'azul': '#717EC7',
-          'azul-escuro': '#3D50B6',
-          'branquinho': '#F5F5F5',
-        }
+      colors: {
+        azul: "#717EC7",
+        "azul-escuro": "#3D50B6",
+        branquinho: "#F5F5F5",
+        roxinho: "#D8CADB",
+        roxao: "#A273C6",
+        roxo: "#CBB3D8",
+      },
     },
   },
   plugins: [],
-}
-export default config
+};
+export default config;

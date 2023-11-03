@@ -33,7 +33,6 @@ const HomeHeader = () => {
       try {
         const userData = await getUserInformation();
         setUser(userData);
-        console.log("user:", user);
       } catch (err) {
         setError(err);
       }
